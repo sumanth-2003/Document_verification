@@ -26,7 +26,7 @@ def overlay_boxes(image, predictions):
         class_colors = {
             "details": "blue",
             "qr": "green",
-            "image": "yellow",
+            "image": "black",
             "aadharno": "red",
             "goi": "purple",
             "emblem": "orange",
@@ -83,7 +83,7 @@ def submit():
 
         rf = Roboflow(api_key="RMzZna7r8BabI0Fz7SJV")
         project = rf.workspace().project("aadhardetection")
-        model = project.version(3).model
+        model = project.version(4).model
         # jsonimage = model.predict("input_image.jpg", confidence=40, overlap=30).json();
         prediction_result = model.predict("input_image.jpg", confidence=40, overlap=30)
 

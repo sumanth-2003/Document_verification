@@ -20,7 +20,6 @@ async function submitForm() {
     }
     
     const fileInput = document.getElementById('fileInput');
-
     // Check if a file is selected
     if (fileInput.files.length > 0) {
         // Pass the selected file to loadImageBase64 function
